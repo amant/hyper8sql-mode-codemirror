@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Testing codemirror</title>
+    <link rel="stylesheet" href="../../lib/codemirror.css" />
+    <script src="../../lib/codemirror.js"></script>
+    <script src="../../mode/sql/sql.js"></script>
+
+    <link rel="stylesheet" href="../../addon/hint/show-hint.css" />
+    <script src="../../addon/hint/show-hint.js"></script>
+    <script src="../../addon/hint/sql-hint.js"></script>
+    <script src="hyper8sql.js"></script>
+  </head>
+  <body>
+    <h1>Hyper8-SQL Highlighter</h1>
+    <div style="border:1px solid #ccc">
+    <textarea id="editor">SELECT
+    column1, column2, COUNT(), SUM(column1)
+FROM
+    table1, Q::123, R::DATE, R::DATE::WEEK
+WHERE
+    H8::rowid in (@filter) AND R::STATUS = 1
+GROUP BY
+    column1, column2</textarea>
+    </div>
+    <script>
+    (function () {
+      // setup the editor
+      var editor = new CreateEditor(document.getElementById('editor'));
+      editor.setSize('100%', '500px');
+    }());
+    </script>
+  </body>
+</html>

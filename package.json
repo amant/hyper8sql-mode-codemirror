@@ -1,0 +1,7 @@
+{
+    "name": "hyper8sql",
+    "version":"1.0.0",
+    "description": "Highlighter and Autocomplete for Hyper8 SQL",
+    "license": "MIT",
+    "devDependencies": {"codemirror": "5.13.3"}    
+}
